@@ -7,6 +7,7 @@ import java.security.NoSuchAlgorithmException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.provider.Settings.Secure;
@@ -52,6 +53,7 @@ public final class DidHelper {
 		return md5Did;
 	}
 	
+	@SuppressLint("HardwareIds")
 	private String generateDid(Context context){
 		JSONObject json = new JSONObject();
 		try {
